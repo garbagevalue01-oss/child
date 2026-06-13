@@ -1,0 +1,3 @@
+<style name="Theme.ChildApp" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- আপনার কাস্টম থিম যদি চান তাহলে এখানে যোগ করবেন -->
+</style>

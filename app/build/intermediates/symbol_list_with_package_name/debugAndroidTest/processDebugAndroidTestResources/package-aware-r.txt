@@ -1,0 +1,3 @@
+com.monitoring.child.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

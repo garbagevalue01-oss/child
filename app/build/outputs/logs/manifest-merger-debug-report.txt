@@ -1,0 +1,413 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:1-78:12
+INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:1-78:12
+INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:1-78:12
+INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:1-78:12
+MERGED from [com.google.android.material:material:1.10.0] /home/farabi/.gradle/caches/transforms-4/94fd930d23d3300567a94d91aed7e336/transformed/material-1.10.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/farabi/.gradle/caches/transforms-4/856a1595876e552538e516389effe331/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/farabi/.gradle/caches/transforms-4/93df968d454633cb3a3ae5c3e12afcfa/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /home/farabi/.gradle/caches/transforms-4/a6263f23dc36411c1406d9ffd3b371e3/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /home/farabi/.gradle/caches/transforms-4/6cb71f64fdac7ab5540e1b8db95f8232/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/farabi/.gradle/caches/transforms-4/a56c20230394ec2bd7de320be21f6272/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/farabi/.gradle/caches/transforms-4/8e22d5d912444fc638c63bfbe77f8a79/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] /home/farabi/.gradle/caches/transforms-4/4dc3197985c51bf586b0acc6a38aae73/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.0] /home/farabi/.gradle/caches/transforms-4/28eeffc9755e2645398c24cec6c3de7a/transformed/jetified-activity-1.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/farabi/.gradle/caches/transforms-4/f55241c39847802d5474aa58f36edf2b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.2] /home/farabi/.gradle/caches/transforms-4/e4f4ebd25f6524bbcfdf5a020de41721/transformed/jetified-lifecycle-service-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/farabi/.gradle/caches/transforms-4/2d8d9caed21a65c8dc18b32d075a7e29/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/farabi/.gradle/caches/transforms-4/29bc80d82d8a3a56fea53ee9c152ce36/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/farabi/.gradle/caches/transforms-4/fb5b2ecf6e69dc742d13a10dc2b8ccb4/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/farabi/.gradle/caches/transforms-4/f055e25e56cddfd101c0408269907b6c/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/farabi/.gradle/caches/transforms-4/288751d48209ab11b65234d4e0102404/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/farabi/.gradle/caches/transforms-4/b8d30561df8f3a1129b98b4d5f935f3c/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/farabi/.gradle/caches/transforms-4/244d6833adaf68bacd97ccf22383950d/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/farabi/.gradle/caches/transforms-4/52001b1ee3a7bf81221f9342a052383d/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.12.0] /home/farabi/.gradle/caches/transforms-4/0a58d52fe748a3547891b8a9f8da1b78/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/farabi/.gradle/caches/transforms-4/e6a018241327c817936a2c3c9f9c49cc/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/farabi/.gradle/caches/transforms-4/92ba7f4b8f83e0d9e646fe0ef42373c1/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] /home/farabi/.gradle/caches/transforms-4/39d9ef9957d60984b27824832cb2f83f/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/farabi/.gradle/caches/transforms-4/fcc72929abf7ab70d5bd488056277013/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/farabi/.gradle/caches/transforms-4/50cb2606853dba48988d7895609596c9/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/farabi/.gradle/caches/transforms-4/19d023f3a60eea4cf5eb1c532bab591d/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/farabi/.gradle/caches/transforms-4/8e0bb89878b3c226dc935b754621b3e2/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /home/farabi/.gradle/caches/transforms-4/ee17aced1463f9d003acbc6f77379a86/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/farabi/.gradle/caches/transforms-4/6830a094ee52f4e0cbccd1347f52965a/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/farabi/.gradle/caches/transforms-4/50cee7bea3b7216f9454a162ed58ac2e/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/farabi/.gradle/caches/transforms-4/8b812f897cbfdb95ce6a244d65e73375/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/farabi/.gradle/caches/transforms-4/06899ad34059219eddc5e1f866c33acb/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/farabi/.gradle/caches/transforms-4/2b1e75a7ff587f55cb65f5624a121194/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/farabi/.gradle/caches/transforms-4/91f69ae0b6602f583ef334e07bc064ad/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/farabi/.gradle/caches/transforms-4/8d8341860100803b5a651888d26ae4ba/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/farabi/.gradle/caches/transforms-4/3df8d613639375da4a3e5a2c86a14316/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/farabi/.gradle/caches/transforms-4/9bb3b79649cdbea121acba997f10ea09/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/farabi/.gradle/caches/transforms-4/ff0424837bf49e40fcf9637eab532cef/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/farabi/.gradle/caches/transforms-4/e1691198c5fb7a7a37e58005d2111ae3/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+	package
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:3:5-35
+		INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml
+	android:sharedUserId
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:4:5-46
+	android:versionName
+		INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INSTALL_PACKAGES
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:7:5-75
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:7:22-72
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:8:5-83
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:8:22-80
+uses-permission#android.permission.DELETE_PACKAGES
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:9:5-74
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:9:22-71
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:10:5-77
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:10:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:11:5-94
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:11:22-91
+uses-permission#android.permission.FOREGROUND_SERVICE_CAMERA
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:12:5-84
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:12:22-81
+uses-permission#android.permission.READ_SMS
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:13:5-67
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:13:22-64
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:14:5-70
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:14:22-67
+uses-permission#android.permission.CAMERA
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:15:5-65
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:15:22-62
+uses-permission#android.permission.INTERNET
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:16:5-67
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:16:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:17:22-76
+uses-permission#android.permission.BIND_DEVICE_ADMIN
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:18:5-76
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:18:22-73
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:19:5-80
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:19:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:20:5-81
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:20:22-78
+uses-permission#android.permission.QUERY_ALL_PACKAGES
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:21:5-77
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:21:22-74
+application
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:23:5-77:19
+INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:23:5-77:19
+MERGED from [com.google.android.material:material:1.10.0] /home/farabi/.gradle/caches/transforms-4/94fd930d23d3300567a94d91aed7e336/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.10.0] /home/farabi/.gradle/caches/transforms-4/94fd930d23d3300567a94d91aed7e336/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/farabi/.gradle/caches/transforms-4/856a1595876e552538e516389effe331/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/farabi/.gradle/caches/transforms-4/856a1595876e552538e516389effe331/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/farabi/.gradle/caches/transforms-4/a56c20230394ec2bd7de320be21f6272/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/farabi/.gradle/caches/transforms-4/a56c20230394ec2bd7de320be21f6272/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/farabi/.gradle/caches/transforms-4/06899ad34059219eddc5e1f866c33acb/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/farabi/.gradle/caches/transforms-4/06899ad34059219eddc5e1f866c33acb/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/farabi/.gradle/caches/transforms-4/8d8341860100803b5a651888d26ae4ba/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/farabi/.gradle/caches/transforms-4/8d8341860100803b5a651888d26ae4ba/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:28:9-35
+	android:label
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:26:9-41
+	android:roundIcon
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:27:9-54
+	android:icon
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:25:9-43
+	android:allowBackup
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:24:9-36
+	android:theme
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:29:9-65
+activity#com.monitoring.child.MainActivity
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:32:9-40:20
+	android:exported
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:34:13-36
+	android:theme
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:35:13-69
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:33:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:36:13-39:29
+action#android.intent.action.MAIN
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:37:17-69
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:37:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:38:17-77
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:38:27-74
+service#com.monitoring.child.ScreenCaptureService
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:43:9-46:70
+	android:exported
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:45:13-37
+	android:foregroundServiceType
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:46:13-67
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:44:13-49
+receiver#com.monitoring.child.MyDeviceAdminReceiver
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:49:9-60:20
+	android:exported
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:51:13-36
+	android:permission
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:52:13-70
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:50:13-50
+meta-data#android.app.device_admin
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:53:13-55:65
+	android:resource
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:55:17-62
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:54:17-56
+intent-filter#action:name:android.app.action.DEVICE_ADMIN_DISABLED+action:name:android.app.action.DEVICE_ADMIN_ENABLED
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:56:13-59:29
+action#android.app.action.DEVICE_ADMIN_ENABLED
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:57:17-82
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:57:25-79
+action#android.app.action.DEVICE_ADMIN_DISABLED
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:58:17-83
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:58:25-80
+receiver#com.monitoring.child.SmsReceiver
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:63:9-70:20
+	android:exported
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:65:13-36
+	android:permission
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:66:13-64
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:64:13-40
+intent-filter#action:name:android.provider.Telephony.SMS_RECEIVED
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:67:13-69:29
+	android:priority
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:67:28-50
+action#android.provider.Telephony.SMS_RECEIVED
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:68:17-82
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:68:25-79
+receiver#com.monitoring.child.InstallResultReceiver
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:73:9-75:40
+	android:exported
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:75:13-37
+	android:name
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:74:13-50
+uses-sdk
+INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml
+INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.10.0] /home/farabi/.gradle/caches/transforms-4/94fd930d23d3300567a94d91aed7e336/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.10.0] /home/farabi/.gradle/caches/transforms-4/94fd930d23d3300567a94d91aed7e336/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/farabi/.gradle/caches/transforms-4/856a1595876e552538e516389effe331/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/farabi/.gradle/caches/transforms-4/856a1595876e552538e516389effe331/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/farabi/.gradle/caches/transforms-4/93df968d454633cb3a3ae5c3e12afcfa/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/farabi/.gradle/caches/transforms-4/93df968d454633cb3a3ae5c3e12afcfa/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /home/farabi/.gradle/caches/transforms-4/a6263f23dc36411c1406d9ffd3b371e3/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /home/farabi/.gradle/caches/transforms-4/a6263f23dc36411c1406d9ffd3b371e3/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /home/farabi/.gradle/caches/transforms-4/6cb71f64fdac7ab5540e1b8db95f8232/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /home/farabi/.gradle/caches/transforms-4/6cb71f64fdac7ab5540e1b8db95f8232/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/farabi/.gradle/caches/transforms-4/a56c20230394ec2bd7de320be21f6272/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/farabi/.gradle/caches/transforms-4/a56c20230394ec2bd7de320be21f6272/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/farabi/.gradle/caches/transforms-4/8e22d5d912444fc638c63bfbe77f8a79/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/farabi/.gradle/caches/transforms-4/8e22d5d912444fc638c63bfbe77f8a79/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /home/farabi/.gradle/caches/transforms-4/4dc3197985c51bf586b0acc6a38aae73/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /home/farabi/.gradle/caches/transforms-4/4dc3197985c51bf586b0acc6a38aae73/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.0] /home/farabi/.gradle/caches/transforms-4/28eeffc9755e2645398c24cec6c3de7a/transformed/jetified-activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] /home/farabi/.gradle/caches/transforms-4/28eeffc9755e2645398c24cec6c3de7a/transformed/jetified-activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/farabi/.gradle/caches/transforms-4/f55241c39847802d5474aa58f36edf2b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/farabi/.gradle/caches/transforms-4/f55241c39847802d5474aa58f36edf2b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.2] /home/farabi/.gradle/caches/transforms-4/e4f4ebd25f6524bbcfdf5a020de41721/transformed/jetified-lifecycle-service-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.6.2] /home/farabi/.gradle/caches/transforms-4/e4f4ebd25f6524bbcfdf5a020de41721/transformed/jetified-lifecycle-service-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/farabi/.gradle/caches/transforms-4/2d8d9caed21a65c8dc18b32d075a7e29/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/farabi/.gradle/caches/transforms-4/2d8d9caed21a65c8dc18b32d075a7e29/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/farabi/.gradle/caches/transforms-4/29bc80d82d8a3a56fea53ee9c152ce36/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/farabi/.gradle/caches/transforms-4/29bc80d82d8a3a56fea53ee9c152ce36/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/farabi/.gradle/caches/transforms-4/fb5b2ecf6e69dc742d13a10dc2b8ccb4/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/farabi/.gradle/caches/transforms-4/fb5b2ecf6e69dc742d13a10dc2b8ccb4/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/farabi/.gradle/caches/transforms-4/f055e25e56cddfd101c0408269907b6c/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/farabi/.gradle/caches/transforms-4/f055e25e56cddfd101c0408269907b6c/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/farabi/.gradle/caches/transforms-4/288751d48209ab11b65234d4e0102404/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/farabi/.gradle/caches/transforms-4/288751d48209ab11b65234d4e0102404/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/farabi/.gradle/caches/transforms-4/b8d30561df8f3a1129b98b4d5f935f3c/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/farabi/.gradle/caches/transforms-4/b8d30561df8f3a1129b98b4d5f935f3c/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/farabi/.gradle/caches/transforms-4/244d6833adaf68bacd97ccf22383950d/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/farabi/.gradle/caches/transforms-4/244d6833adaf68bacd97ccf22383950d/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/farabi/.gradle/caches/transforms-4/52001b1ee3a7bf81221f9342a052383d/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/farabi/.gradle/caches/transforms-4/52001b1ee3a7bf81221f9342a052383d/transformed/jetified-lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /home/farabi/.gradle/caches/transforms-4/0a58d52fe748a3547891b8a9f8da1b78/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /home/farabi/.gradle/caches/transforms-4/0a58d52fe748a3547891b8a9f8da1b78/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/farabi/.gradle/caches/transforms-4/e6a018241327c817936a2c3c9f9c49cc/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/farabi/.gradle/caches/transforms-4/e6a018241327c817936a2c3c9f9c49cc/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/farabi/.gradle/caches/transforms-4/92ba7f4b8f83e0d9e646fe0ef42373c1/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/farabi/.gradle/caches/transforms-4/92ba7f4b8f83e0d9e646fe0ef42373c1/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/farabi/.gradle/caches/transforms-4/39d9ef9957d60984b27824832cb2f83f/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/farabi/.gradle/caches/transforms-4/39d9ef9957d60984b27824832cb2f83f/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/farabi/.gradle/caches/transforms-4/fcc72929abf7ab70d5bd488056277013/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/farabi/.gradle/caches/transforms-4/fcc72929abf7ab70d5bd488056277013/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/farabi/.gradle/caches/transforms-4/50cb2606853dba48988d7895609596c9/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/farabi/.gradle/caches/transforms-4/50cb2606853dba48988d7895609596c9/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/farabi/.gradle/caches/transforms-4/19d023f3a60eea4cf5eb1c532bab591d/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/farabi/.gradle/caches/transforms-4/19d023f3a60eea4cf5eb1c532bab591d/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/farabi/.gradle/caches/transforms-4/8e0bb89878b3c226dc935b754621b3e2/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/farabi/.gradle/caches/transforms-4/8e0bb89878b3c226dc935b754621b3e2/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /home/farabi/.gradle/caches/transforms-4/ee17aced1463f9d003acbc6f77379a86/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /home/farabi/.gradle/caches/transforms-4/ee17aced1463f9d003acbc6f77379a86/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/farabi/.gradle/caches/transforms-4/6830a094ee52f4e0cbccd1347f52965a/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/farabi/.gradle/caches/transforms-4/6830a094ee52f4e0cbccd1347f52965a/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/farabi/.gradle/caches/transforms-4/50cee7bea3b7216f9454a162ed58ac2e/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/farabi/.gradle/caches/transforms-4/50cee7bea3b7216f9454a162ed58ac2e/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/farabi/.gradle/caches/transforms-4/8b812f897cbfdb95ce6a244d65e73375/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/farabi/.gradle/caches/transforms-4/8b812f897cbfdb95ce6a244d65e73375/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/farabi/.gradle/caches/transforms-4/06899ad34059219eddc5e1f866c33acb/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/farabi/.gradle/caches/transforms-4/06899ad34059219eddc5e1f866c33acb/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /home/farabi/.gradle/caches/transforms-4/2b1e75a7ff587f55cb65f5624a121194/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/farabi/.gradle/caches/transforms-4/2b1e75a7ff587f55cb65f5624a121194/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/farabi/.gradle/caches/transforms-4/91f69ae0b6602f583ef334e07bc064ad/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/farabi/.gradle/caches/transforms-4/91f69ae0b6602f583ef334e07bc064ad/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/farabi/.gradle/caches/transforms-4/8d8341860100803b5a651888d26ae4ba/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/farabi/.gradle/caches/transforms-4/8d8341860100803b5a651888d26ae4ba/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/farabi/.gradle/caches/transforms-4/3df8d613639375da4a3e5a2c86a14316/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/farabi/.gradle/caches/transforms-4/3df8d613639375da4a3e5a2c86a14316/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/farabi/.gradle/caches/transforms-4/9bb3b79649cdbea121acba997f10ea09/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/farabi/.gradle/caches/transforms-4/9bb3b79649cdbea121acba997f10ea09/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/farabi/.gradle/caches/transforms-4/ff0424837bf49e40fcf9637eab532cef/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/farabi/.gradle/caches/transforms-4/ff0424837bf49e40fcf9637eab532cef/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/farabi/.gradle/caches/transforms-4/e1691198c5fb7a7a37e58005d2111ae3/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/farabi/.gradle/caches/transforms-4/e1691198c5fb7a7a37e58005d2111ae3/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+	android:targetSdkVersion
+		INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/farabi/.gradle/caches/transforms-4/8d8341860100803b5a651888d26ae4ba/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/farabi/.gradle/caches/transforms-4/8d8341860100803b5a651888d26ae4ba/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+permission#com.monitoring.child.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+uses-permission#com.monitoring.child.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
