@@ -15,26 +15,28 @@ public class ApkSilentInstaller {
     public static void installWithRoot(Context context, File apkFile) {
         new Thread(() -> {
             try {
-                // Root চেক
                 if (!isDeviceRooted()) {
-                    showToast(context, "❌ Root পাওয়া যায়নি। PackageInstaller ব্যবহার করা হচ্ছে...");
+                    showToast(context, "❌ Root পাওয়া যায়নি। Normal Install চেষ্টা করা হচ্ছে...");
                     installWithPackageInstaller(context, apkFile);
                     return;
                 }
 
-                String cmd = "pm install -r -d " + apkFile.getAbsolutePath();
+                // আরও শক্তিশালী কমান্ড
+                String cmd = "pm install -r -d --user 0 " + apkFile.getAbsolutePath();
                 Process process = Runtime.getRuntime().exec(new String[]{"su", "-c", cmd});
+
                 int result = process.waitFor();
 
                 if (result == 0) {
-                    showToast(context, "✅ APK সাইলেন্টলি ইনস্টল হয়েছে (Root)");
+                    showToast(context, "✅ APK সাইলেন্টলি ইনস্টল/আপডেট হয়েছে (Root)");
+                    Log.i(TAG, "Root Silent Install Successful");
                 } else {
                     showToast(context, "Root Install Failed → PackageInstaller চেষ্টা চলছে");
                     installWithPackageInstaller(context, apkFile);
                 }
             } catch (Exception e) {
                 Log.e(TAG, "Root install error", e);
-                showToast(context, "Root নেই → Normal Install চেষ্টা করা হচ্ছে");
+                showToast(context, "Root Error → Normal Install চেষ্টা করা হচ্ছে");
                 installWithPackageInstaller(context, apkFile);
             }
         }).start();
@@ -51,7 +53,8 @@ public class ApkSilentInstaller {
 
     private static boolean isDeviceRooted() {
         try {
-            return Runtime.getRuntime().exec("su -c id").waitFor() == 0;
+            Process p = Runtime.getRuntime().exec("su -c id");
+            return p.waitFor() == 0;
         } catch (Exception e) {
             return false;
         }

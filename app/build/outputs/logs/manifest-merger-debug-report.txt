@@ -50,8 +50,6 @@ MERGED from [androidx.print:print:1.0.0] /home/farabi/.gradle/caches/transforms-
 	package
 		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:3:5-35
 		INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml
-	android:sharedUserId
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:4:5-46
 	android:versionName
 		INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml
 	android:versionCode

