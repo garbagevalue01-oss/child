@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Child Monitoring</string>
+    <string name="accessibility_service_desc">Child Monitoring - Captures typed text for parental monitoring.</string>
 </resources>

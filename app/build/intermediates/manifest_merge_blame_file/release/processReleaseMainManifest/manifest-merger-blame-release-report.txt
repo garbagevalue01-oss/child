@@ -1,0 +1,282 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.monitoring.child"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10    <!-- android:sharedUserId="android.uid.system" -->
+11
+12
+13    <!-- capture text permission -->
+14    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+14-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:9:5-85
+14-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:9:22-82
+15
+16    <!-- System App Permissions -->
+17    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+17-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:12:5-75
+17-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:12:22-72
+18    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+18-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:13:5-74
+18-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:13:22-71
+19    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+19-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:14:5-83
+19-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:14:22-80
+20    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+20-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:15:5-77
+20-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:15:22-74
+21    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+21-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:16:5-80
+21-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:16:22-77
+22    <uses-permission android:name="android.permission.MANAGE_USERS" />
+22-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:17:5-71
+22-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:17:22-68
+23    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+23-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:18:5-80
+23-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:18:22-77
+24
+25    <!-- Normal Permissions -->
+26    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+26-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:21:5-77
+26-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:21:22-74
+27    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+27-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:22:5-94
+27-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:22:22-91
+28    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+28-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:23:5-84
+28-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:23:22-81
+29    <uses-permission android:name="android.permission.READ_SMS" />
+29-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:24:5-67
+29-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:24:22-64
+30    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+30-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:25:5-70
+30-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:25:22-67
+31    <uses-permission android:name="android.permission.CAMERA" />
+31-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:26:5-65
+31-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:26:22-62
+32    <uses-permission android:name="android.permission.INTERNET" />
+32-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:27:5-67
+32-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:27:22-64
+33    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+33-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:28:5-79
+33-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:28:22-76
+34    <uses-permission android:name="android.permission.BIND_DEVICE_ADMIN" />
+34-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:29:5-76
+34-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:29:22-73
+35    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+35-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:30:5-80
+35-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:30:22-77
+36    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+36-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:31:5-81
+36-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:31:22-78
+37    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+37-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:32:5-72
+37-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:32:22-69
+38    <uses-permission android:name="android.permission.READ_CONTACTS" />
+38-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:33:5-72
+38-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:33:22-69
+39
+40    <permission
+40-->[androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+41        android:name="com.monitoring.child.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+41-->[androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+42        android:protectionLevel="signature" />
+42-->[androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+43
+44    <uses-permission android:name="com.monitoring.child.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+44-->[androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+44-->[androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+45
+46    <application
+46-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:35:5-100:19
+47        android:allowBackup="true"
+47-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:36:9-35
+48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+48-->[androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+49        android:directBootAware="true"
+49-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:42:9-39
+50        android:extractNativeLibs="false"
+51        android:icon="@mipmap/ic_launcher"
+51-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:37:9-43
+52        android:label="Child Monitoring"
+52-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:38:9-41
+53        android:persistent="true"
+53-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:39:9-34
+54        android:resizeableActivity="false"
+54-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:40:9-43
+55        android:supportsRtl="true"
+55-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:41:9-35
+56        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+56-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:43:9-65
+57        <activity
+57-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:45:9-53:20
+58            android:name="com.monitoring.child.MainActivity"
+58-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:46:13-41
+59            android:exported="true"
+59-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:47:13-36
+60            android:launchMode="singleTask" >
+60-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:48:13-44
+61            <intent-filter>
+61-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:49:13-52:29
+62                <action android:name="android.intent.action.MAIN" />
+62-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:50:17-69
+62-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:50:25-66
+63
+64                <category android:name="android.intent.category.LAUNCHER" />
+64-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:51:17-77
+64-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:51:27-74
+65            </intent-filter>
+66        </activity>
+67
+68        <service
+68-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:55:9-68:19
+69            android:name="com.monitoring.child.MyTextCaptureService"
+69-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:56:13-49
+70            android:exported="true"
+70-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:58:13-36
+71            android:label="Child Text Monitor"
+71-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:59:13-47
+72            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+72-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:57:13-79
+73            <intent-filter>
+73-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:61:13-63:29
+74                <action android:name="android.accessibilityservice.AccessibilityService" />
+74-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:62:17-92
+74-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:62:25-89
+75            </intent-filter>
+76
+77            <meta-data
+77-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:65:13-67:72
+78                android:name="android.accessibilityservice"
+78-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:66:17-60
+79                android:resource="@xml/accessibility_service_config" />
+79-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:67:17-69
+80        </service>
+81        <service
+81-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:70:9-73:70
+82            android:name="com.monitoring.child.ScreenCaptureService"
+82-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:71:13-49
+83            android:exported="false"
+83-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:72:13-37
+84            android:foregroundServiceType="mediaProjection|camera" />
+84-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:73:13-67
+85
+86        <receiver
+86-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:75:9-86:20
+87            android:name="com.monitoring.child.MyDeviceAdminReceiver"
+87-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:76:13-50
+88            android:exported="true"
+88-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:77:13-36
+89            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+89-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:78:13-70
+90            <meta-data
+90-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:79:13-81:65
+91                android:name="android.app.device_admin"
+91-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:80:17-56
+92                android:resource="@xml/device_admin_receiver" />
+92-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:81:17-62
+93
+94            <intent-filter>
+94-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:82:13-85:29
+95                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+95-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:83:17-82
+95-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:83:25-79
+96                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED" />
+96-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:84:17-83
+96-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:84:25-80
+97            </intent-filter>
+98        </receiver>
+99        <receiver
+99-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:88:9-95:20
+100            android:name="com.monitoring.child.SmsReceiver"
+100-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:89:13-40
+101            android:exported="true"
+101-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:90:13-36
+102            android:permission="android.permission.RECEIVE_SMS" >
+102-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:91:13-64
+103            <intent-filter android:priority="999" >
+103-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:92:13-94:29
+103-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:92:28-50
+104                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+104-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:93:17-82
+104-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:93:25-79
+105            </intent-filter>
+106        </receiver>
+107        <receiver
+107-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:97:9-99:40
+108            android:name="com.monitoring.child.InstallResultReceiver"
+108-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:98:13-50
+109            android:exported="false" />
+109-->/home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:99:13-37
+110
+111        <provider
+111-->[androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+112            android:name="androidx.startup.InitializationProvider"
+112-->[androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+113            android:authorities="com.monitoring.child.androidx-startup"
+113-->[androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+114            android:exported="false" >
+114-->[androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+115            <meta-data
+115-->[androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+116                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+116-->[androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+117                android:value="androidx.startup" />
+117-->[androidx.emoji2:emoji2:1.2.0] /home/farabi/.gradle/caches/transforms-4/51b689a0be64552815bc89e805377c7d/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+118            <meta-data
+118-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+119                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+119-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+120                android:value="androidx.startup" />
+120-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/farabi/.gradle/caches/transforms-4/fb7849b71f37df2cbd33d1dc3c9740cc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+121            <meta-data
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+122                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+123                android:value="androidx.startup" />
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+124        </provider>
+125
+126        <receiver
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+127            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+128            android:directBootAware="false"
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+129            android:enabled="true"
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+130            android:exported="true"
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+131            android:permission="android.permission.DUMP" >
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+132            <intent-filter>
+132-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+133                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+134            </intent-filter>
+135            <intent-filter>
+135-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+136                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+137            </intent-filter>
+138            <intent-filter>
+138-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+139                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+139-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+139-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+140            </intent-filter>
+141            <intent-filter>
+141-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+142                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+142-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+142-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/farabi/.gradle/caches/transforms-4/4e472411108df6288511678eab1b4f0c/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+143            </intent-filter>
+144        </receiver>
+145    </application>
+146
+147</manifest>

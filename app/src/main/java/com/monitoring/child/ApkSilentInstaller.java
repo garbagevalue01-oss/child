@@ -9,34 +9,31 @@ import android.widget.Toast;
 import java.io.File;
 
 public class ApkSilentInstaller {
-
     private static final String TAG = "ApkSilentInstaller";
 
     public static void installWithRoot(Context context, File apkFile) {
         new Thread(() -> {
             try {
                 if (!isDeviceRooted()) {
-                    showToast(context, "❌ Root পাওয়া যায়নি। Normal Install চেষ্টা করা হচ্ছে...");
+                    showToast(context, "❌ Root নেই → PackageInstaller ব্যবহার করা হচ্ছে");
                     installWithPackageInstaller(context, apkFile);
                     return;
                 }
 
-                // আরও শক্তিশালী কমান্ড
                 String cmd = "pm install -r -d --user 0 " + apkFile.getAbsolutePath();
                 Process process = Runtime.getRuntime().exec(new String[]{"su", "-c", cmd});
-
                 int result = process.waitFor();
 
                 if (result == 0) {
-                    showToast(context, "✅ APK সাইলেন্টলি ইনস্টল/আপডেট হয়েছে (Root)");
+                    showToast(context, "✅ APK সফলভাবে ইনস্টল হয়েছে (Root System App)");
                     Log.i(TAG, "Root Silent Install Successful");
                 } else {
-                    showToast(context, "Root Install Failed → PackageInstaller চেষ্টা চলছে");
+                    showToast(context, "❌ Root Install Failed → Fallback");
                     installWithPackageInstaller(context, apkFile);
                 }
             } catch (Exception e) {
                 Log.e(TAG, "Root install error", e);
-                showToast(context, "Root Error → Normal Install চেষ্টা করা হচ্ছে");
+                showToast(context, "❌ Root Error → Normal Install");
                 installWithPackageInstaller(context, apkFile);
             }
         }).start();
