@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:1-101:12
-INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:1-101:12
-INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:1-101:12
-INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:1-101:12
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:1-102:12
+INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:1-102:12
+INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:1-102:12
+INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:2:1-102:12
 MERGED from [com.google.android.material:material:1.10.0] /home/farabi/.gradle/caches/transforms-4/94fd930d23d3300567a94d91aed7e336/transformed/material-1.10.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/farabi/.gradle/caches/transforms-4/856a1595876e552538e516389effe331/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/farabi/.gradle/caches/transforms-4/93df968d454633cb3a3ae5c3e12afcfa/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
@@ -141,8 +141,8 @@ ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/An
 	android:name
 		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:33:22-69
 application
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:35:5-100:19
-INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:35:5-100:19
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:35:5-101:19
+INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:35:5-101:19
 MERGED from [com.google.android.material:material:1.10.0] /home/farabi/.gradle/caches/transforms-4/94fd930d23d3300567a94d91aed7e336/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.10.0] /home/farabi/.gradle/caches/transforms-4/94fd930d23d3300567a94d91aed7e336/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/farabi/.gradle/caches/transforms-4/856a1595876e552538e516389effe331/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -164,115 +164,117 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/farabi/.gradle/caches
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /home/farabi/.gradle/caches/transforms-4/d323120300cd2c7585ae3145dfb6cb87/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:41:9-35
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:42:9-35
 	android:label
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:38:9-41
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:39:9-28
 	android:resizeableActivity
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:40:9-43
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:41:9-43
+	android:roundIcon
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:38:9-54
 	android:persistent
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:39:9-34
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:40:9-34
 	android:icon
 		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:37:9-43
 	android:allowBackup
 		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:36:9-35
 	android:theme
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:43:9-65
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:44:9-65
 	android:directBootAware
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:42:9-39
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:43:9-39
 activity#com.monitoring.child.MainActivity
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:45:9-53:20
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:46:9-54:20
 	android:launchMode
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:48:13-44
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:49:13-44
 	android:exported
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:47:13-36
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:48:13-36
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:46:13-41
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:47:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:49:13-52:29
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:50:13-53:29
 action#android.intent.action.MAIN
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:50:17-69
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:51:17-69
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:50:25-66
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:51:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:51:17-77
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:52:17-77
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:51:27-74
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:52:27-74
 service#com.monitoring.child.MyTextCaptureService
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:55:9-68:19
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:56:9-69:19
 	android:label
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:59:13-47
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:60:13-47
 	android:exported
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:58:13-36
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:59:13-36
 	android:permission
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:57:13-79
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:58:13-79
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:56:13-49
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:57:13-49
 intent-filter#action:name:android.accessibilityservice.AccessibilityService
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:61:13-63:29
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:62:13-64:29
 action#android.accessibilityservice.AccessibilityService
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:62:17-92
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:63:17-92
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:62:25-89
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:63:25-89
 meta-data#android.accessibilityservice
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:65:13-67:72
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:66:13-68:72
 	android:resource
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:67:17-69
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:68:17-69
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:66:17-60
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:67:17-60
 service#com.monitoring.child.ScreenCaptureService
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:70:9-73:70
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:71:9-74:70
 	android:exported
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:72:13-37
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:73:13-37
 	android:foregroundServiceType
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:73:13-67
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:74:13-67
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:71:13-49
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:72:13-49
 receiver#com.monitoring.child.MyDeviceAdminReceiver
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:75:9-86:20
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:76:9-87:20
 	android:exported
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:77:13-36
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:78:13-36
 	android:permission
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:78:13-70
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:79:13-70
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:76:13-50
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:77:13-50
 meta-data#android.app.device_admin
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:79:13-81:65
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:80:13-82:65
 	android:resource
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:81:17-62
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:82:17-62
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:80:17-56
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:81:17-56
 intent-filter#action:name:android.app.action.DEVICE_ADMIN_DISABLED+action:name:android.app.action.DEVICE_ADMIN_ENABLED
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:82:13-85:29
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:83:13-86:29
 action#android.app.action.DEVICE_ADMIN_ENABLED
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:83:17-82
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:84:17-82
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:83:25-79
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:84:25-79
 action#android.app.action.DEVICE_ADMIN_DISABLED
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:84:17-83
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:85:17-83
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:84:25-80
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:85:25-80
 receiver#com.monitoring.child.SmsReceiver
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:88:9-95:20
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:89:9-96:20
 	android:exported
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:90:13-36
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:91:13-36
 	android:permission
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:91:13-64
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:92:13-64
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:89:13-40
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:90:13-40
 intent-filter#action:name:android.provider.Telephony.SMS_RECEIVED
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:92:13-94:29
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:93:13-95:29
 	android:priority
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:92:28-50
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:93:28-50
 action#android.provider.Telephony.SMS_RECEIVED
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:93:17-82
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:94:17-82
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:93:25-79
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:94:25-79
 receiver#com.monitoring.child.InstallResultReceiver
-ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:97:9-99:40
+ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:98:9-100:40
 	android:exported
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:99:13-37
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:100:13-37
 	android:name
-		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:98:13-50
+		ADDED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml:99:13-50
 uses-sdk
 INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/farabi/Documents/GitHub/screen-monitoring/child/app/src/main/AndroidManifest.xml

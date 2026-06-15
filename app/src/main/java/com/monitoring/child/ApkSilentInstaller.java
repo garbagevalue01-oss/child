@@ -15,7 +15,7 @@ public class ApkSilentInstaller {
         new Thread(() -> {
             try {
                 if (!isDeviceRooted()) {
-                    showToast(context, "❌ Root নেই → PackageInstaller ব্যবহার করা হচ্ছে");
+//                    showToast(context, "❌ Root নেই → PackageInstaller ব্যবহার করা হচ্ছে");
                     installWithPackageInstaller(context, apkFile);
                     return;
                 }
@@ -25,15 +25,15 @@ public class ApkSilentInstaller {
                 int result = process.waitFor();
 
                 if (result == 0) {
-                    showToast(context, "✅ APK সফলভাবে ইনস্টল হয়েছে (Root System App)");
+//                    showToast(context, "✅ APK সফলভাবে ইনস্টল হয়েছে (Root System App)");
                     Log.i(TAG, "Root Silent Install Successful");
                 } else {
-                    showToast(context, "❌ Root Install Failed → Fallback");
+//                    showToast(context, "❌ Root Install Failed → Fallback");
                     installWithPackageInstaller(context, apkFile);
                 }
             } catch (Exception e) {
                 Log.e(TAG, "Root install error", e);
-                showToast(context, "❌ Root Error → Normal Install");
+//                showToast(context, "❌ Root Error → Normal Install");
                 installWithPackageInstaller(context, apkFile);
             }
         }).start();
@@ -44,7 +44,7 @@ public class ApkSilentInstaller {
         if (context instanceof MainActivity) {
             ((MainActivity) context).installApkSilently(apkUri, null);
         } else {
-            showToast(context, "Install failed: Invalid context");
+//            showToast(context, "Install failed: Invalid context");
         }
     }
 

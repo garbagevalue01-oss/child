@@ -8,6 +8,7 @@ id tvDeviceName
 id tvStatus
 layout activity_main
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string accessibility_service_desc
 string app_name
